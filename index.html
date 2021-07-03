@@ -1,0 +1,20 @@
+<html lang="eng">
+  <head>
+    <title>Logic Table Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="components/table.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+  <body>
+    <div role="main">
+      <h1>Logic Table Generator</h1>
+      <form id="expressionForm" onsubmit="expressionSubmit(); return false">
+        <label for="expression">Expression</label>
+        <input type="text" id="expression" />
+
+        <button type="submit">Submit</button>
+      </form>
+      <div id="table"></div>
+    </div>
+  </body>
+</html>
