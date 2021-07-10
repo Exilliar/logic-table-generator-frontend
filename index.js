@@ -18,7 +18,6 @@ function expressionSubmit() {
 function getOperators() {
   fetch(`${url}operators`).then((res) => {
     res.json().then((data) => {
-      console.log("data:", data);
       document.getElementById("operators").innerHTML = operatorDescriptions(data);
     });
   });
