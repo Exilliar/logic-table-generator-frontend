@@ -3,7 +3,7 @@
 //     operator: string;
 //     name: string;
 //     desc: string;
-//     example: string;
+//     examples: string[];
 // }
 
 function operatorDescriptions(operators) {
