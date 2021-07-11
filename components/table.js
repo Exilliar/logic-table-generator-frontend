@@ -10,20 +10,20 @@
 //     letters: string[];
 // }
 function table(data) {
-    let html = "<table>";
+    let html = `<table class="table w-50" style="min-width: 30rem;">`;
     // add headers
     html += "<tr>";
     data.letters.forEach((letter) => {
-        html += `<th>${letter}</th>`
+        html += `<th style="width: 5rem; text-align: center">${letter}</th>`
     });
-    html += "<th>Results</th></tr>";
+    html += `<th style="width: 5rem; text-align: center">Results</th></tr>`;
     // add data
     data.letterValResults.forEach((lvr) => {
         html += "<tr>";
         lvr.letterVals.forEach((lv) => {
-            html += `<td>${lv.val ? 1 : 0}</td>`;
+            html += `<td style="width: 5rem; text-align: center">${lv.val ? 1 : 0}</td>`;
         });
-        html += `<td>${lvr.result ? 1 : 0}</td></tr>`;
+        html += `<td style="width: 5rem; text-align: center">${lvr.result ? 1 : 0}</td></tr>`;
     });
     // end table and return it
     html += "</table>";

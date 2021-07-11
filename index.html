@@ -1,24 +1,44 @@
 <html lang="eng">
   <head>
     <title>Logic Table Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
     <script type="text/javascript" src="components/table.js"></script>
     <script type="text/javascript" src="components/operators.js"></script>
 
     <script type="text/javascript" src="index.js"></script>
   </head>
-  <body>
-    <div role="main">
+  <body class="p-3">
+    <div role="main" class="">
       <h1>Logic Table Generator</h1>
-      <form id="expressionForm" onsubmit="expressionSubmit(); return false">
-        <div id="operators"></div>
+      <form
+        id="expressionForm"
+        class="form-group"
+        onsubmit="expressionSubmit(); return false"
+      >
         <label for="expression">Expression</label>
-        <input type="text" id="expression" />
+        <input type="text" id="expression" class="form-control w-25" style="min-width: 20rem" />
+        <small id="operators" class="form-text text-white"></small>
 
-        <button type="submit">Submit</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
       </form>
-      <div id="table"></div>
+      <div id="table" style="overflow-x: auto"></div>
     </div>
   </body>
 </html>
