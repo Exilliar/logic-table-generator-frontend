@@ -10,7 +10,7 @@
 //     letters: string[];
 // }
 function table(data) {
-  let html = `<table class="table">`;
+  let html = `<table class="table results-table">`;
   // add headers
   html += "<tr>";
   data.letters.forEach((letter) => {

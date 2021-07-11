@@ -2,11 +2,10 @@
   min-width: 20rem;
 }
 
-#table {
+table {
   overflow-x: auto;
 }
 
-td,
-th {
+.results-table {
   text-align: center;
 }

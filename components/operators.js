@@ -1,4 +1,4 @@
-// interface for opeartors:
+// interface for opeartors  (operators is an array of this object):
 // interface OperatorDesc {
 //     operator: string;
 //     name: string;
@@ -6,9 +6,12 @@
 //     examples: string[];
 // }
 
-function operatorDescriptions(operators) {
-  let html = `<p>Available operators: ${operators.map((operator) => {
-    return `${operator.operator} (${operator.name})`;
-  }).join(", ")}`;
+function operatorBasic(operators) {
+  let html = `<p>Available operators: ${operators
+    .map((operator) => {
+      return `${operator.operator} (${operator.name})`;
+    })
+    .join(", ")}
+    <button id="o-learn-more" class="btn btn-link ml-2">Learn more</button>`;
   return html;
 }
