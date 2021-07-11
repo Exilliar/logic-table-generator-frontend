@@ -1,0 +1,12 @@
+#expression {
+  min-width: 20rem;
+}
+
+#table {
+  overflow-x: auto;
+}
+
+td,
+th {
+  text-align: center;
+}

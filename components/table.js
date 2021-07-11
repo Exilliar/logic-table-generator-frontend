@@ -10,22 +10,22 @@
 //     letters: string[];
 // }
 function table(data) {
-    let html = `<table class="table w-50" style="min-width: 30rem;">`;
-    // add headers
+  let html = `<table class="table">`;
+  // add headers
+  html += "<tr>";
+  data.letters.forEach((letter) => {
+    html += `<th scope="col">${letter}</th>`;
+  });
+  html += `<th scope="col">Results</th></tr>`;
+  // add data
+  data.letterValResults.forEach((lvr) => {
     html += "<tr>";
-    data.letters.forEach((letter) => {
-        html += `<th style="width: 5rem; text-align: center">${letter}</th>`
+    lvr.letterVals.forEach((lv) => {
+      html += `<td>${lv.val ? 1 : 0}</td>`;
     });
-    html += `<th style="width: 5rem; text-align: center">Results</th></tr>`;
-    // add data
-    data.letterValResults.forEach((lvr) => {
-        html += "<tr>";
-        lvr.letterVals.forEach((lv) => {
-            html += `<td style="width: 5rem; text-align: center">${lv.val ? 1 : 0}</td>`;
-        });
-        html += `<td style="width: 5rem; text-align: center">${lvr.result ? 1 : 0}</td></tr>`;
-    });
-    // end table and return it
-    html += "</table>";
-    return html;
+    html += `<td>${lvr.result ? 1 : 0}</td></tr>`;
+  });
+  // end table and return it
+  html += "</table>";
+  return html;
 }
