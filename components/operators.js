@@ -12,6 +12,6 @@ function operatorBasic(operators) {
       return `${operator.operator} (${operator.name})`;
     })
     .join(", ")}
-    <button id="o-learn-more" class="btn btn-link ml-2">Learn more</button>`;
+    <button type="button" id="o-learn-more" class="btn btn-link ml-2">Learn more</button>`;
   return html;
 }

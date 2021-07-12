@@ -1,5 +1,6 @@
 #expression {
-  min-width: 20rem;
+  width: 22.5rem;
+  max-width: 100%;
 }
 
 table {
