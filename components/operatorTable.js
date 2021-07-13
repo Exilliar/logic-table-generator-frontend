@@ -10,8 +10,8 @@ function operatorTable(operators) {
   let html = `<table class="table">`;
   // add headers
   html += "<tr>";
+  // select the 0th element as all objects will have the same keys
   Object.keys(operators[0]).forEach((key) => {
-    // select the 0th element as all objects will have the same keys
     html += `<th>${key}</th>`;
   });
   html += "</tr>";
@@ -21,9 +21,9 @@ function operatorTable(operators) {
     html += "<tr>";
     Object.entries(op).forEach(([key, value]) => {
       if (Array.isArray(value)) {
-        html += `<td><ul>${value
-          .map((v) => `<li>${v}</li>`)
-          .join("")}</ul></td>`;
+        html += `<td style="text-wrap: none">${value
+          .map((v) => `${v}<br> <br>`)
+          .join("")}</td>`;
       } else {
         html += `<td>${value}</td>`;
       }
