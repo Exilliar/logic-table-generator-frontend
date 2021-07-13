@@ -1,18 +1,12 @@
-body {
-  font-family: Verdana, sans-serif;
-}
-
-table,
-td,
-th {
-  border: 1px solid black;
-}
-td,
-th {
-  min-width: 5rem;
-  text-align: center;
+#expression {
+  width: 22.5rem;
+  max-width: 100%;
 }
 
 table {
-  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+.results-table {
+  text-align: center;
 }
