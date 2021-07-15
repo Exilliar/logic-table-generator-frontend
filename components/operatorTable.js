@@ -21,7 +21,7 @@ function operatorTable(operators) {
     html += "<tr>";
     Object.entries(op).forEach(([key, value]) => {
       if (Array.isArray(value)) {
-        html += `<td style="text-wrap: none">${value
+        html += `<td class="example">${value
           .map((v) => `${v}<br> <br>`)
           .join("")}</td>`;
       } else {

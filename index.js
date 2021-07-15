@@ -10,7 +10,7 @@ function expressionSubmit() {
 
   fetch(`${url}calculate/${expression}`).then((res) => {
     res.json().then((data) => {
-      document.getElementById("table").innerHTML = table(data);
+      document.getElementById("results-table").innerHTML = table(data);
     });
   });
 }

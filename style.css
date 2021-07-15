@@ -3,10 +3,15 @@
   max-width: 100%;
 }
 
-table {
+.tableOverflow {
+  max-width: 100%;
   overflow-x: auto;
 }
 
 .results-table {
   text-align: center;
+}
+
+.example {
+  white-space: nowrap;
 }
